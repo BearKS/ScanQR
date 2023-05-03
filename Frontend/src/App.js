@@ -11,7 +11,6 @@ function App() {
     const [scanResultWebCam, setScanResultWebCam] = useState('');
     const classes = useStyles();
     const qrRef = useRef(null);
-    const classes2 = useStyles();
 
     const generateQrCode = async() => {
         try {
@@ -58,13 +57,15 @@ function App() {
             <
             TextField label = "Enter URL"
             onChange = {
-                (e) => setText(e.target.value) }
+                (e) => setText(e.target.value)
+            }
             /> <
             Button className = { classes.btn }
             variant = "contained"
             color = "primary"
             onClick = {
-                () => generateQrCode() } > Generate < /Button> <
+                () => generateQrCode()
+            } > Generate < /Button> <
             br / >
             <
             br / >
@@ -77,8 +78,8 @@ function App() {
                     img src = { imageUrl }
                     alt = "img" / >
                     <
-                    /a>) : null} <
-                    /Grid> {
+                    /a>) : null} < /
+                    Grid > {
                         /* <Grid item xl={4} lg={4} md={6} sm={12} xs={12}>
                                                 <Button className={classes.btn} variant="contained" color="secondary" onClick={onScanFile}>Scan Qr Code</Button>
                                                 <QrReader
@@ -103,10 +104,10 @@ function App() {
                                                  <h3>Scanned By WebCam Code: {scanResultWebCam}</h3>
                                               </Grid> */
                     } <
-                    /Grid> <
-                    /CardContent> <
-                    /Card> <
-                    /Container>
+                    /Grid> < /
+                    CardContent > <
+                    /Card> < /
+                    Container >
                 );
             }
 
